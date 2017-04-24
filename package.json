@@ -1,0 +1,22 @@
+{
+  "name": "fk-workshop",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Iteam1337/fk-workshop.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Iteam1337/fk-workshop/issues"
+  },
+  "homepage": "https://github.com/Iteam1337/fk-workshop#readme",
+  "dependencies": {
+    "fluent-amqp": "^0.2.0"
+  }
+}

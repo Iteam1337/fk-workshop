@@ -1,0 +1,14 @@
+#!/usr/bin/env node
+const amqp = require('fluent-amqp')
+process.env.LOG_LEVEL = process.env.LOG_LEVEL || 'debug'
+
+const host = 'rabbitmq-1.fk-dev-days.80cb1ef5.cont.dockerapp.io'
+const user = 'admin'
+const pass = 'workshop'
+const url = `amqp://${user}:${pass}@${host}`
+
+amqp(url)
+  .exchange('chat', 'fanout')
+  .publish(process.argv.slice(2).join(' '))
+  .catch(err => console.error(err))
+  .then(() => setTimeout(() => process.exit(0), 100))
